@@ -1,14 +1,13 @@
 #include<unistd.h>
 /**
  * main - Entry point
- * Description:  C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line
+ * Description:  C program that prints exactly
  * Return: Always 1 (Success)
  */
 int main(void)
 {
 	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(1.quo,59);
-
+	write(1, quo, 59);
 	return (1);
 }
