@@ -1,20 +1,15 @@
 #include "function_pointers.h"
 /**
- * int_index - searches for integer
+ * array_iterator - maps an array through a func pointer
  * @array: the int array
  * @size: the array size
- * @cmp: the copare function
- * Return: the integer index
+ * @action: function pointer
+ * Return: void
  */
-int int_index(int *array, int size, int (*cmp)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	 int i = 0;
-	if (array && size && cmp)
-		while (i < size)
-		{
-			if (cmp(array[i]))
-				return (i);
-			i++;
-		}
-	return (-1);
+	 int *end = array + size - 1;
+	if (array && size && action)
+		while (array <= end)
+			action(*array++);
 }
