@@ -3,6 +3,8 @@
 This module contains the function island_perimeter which calculates
 the perimeter of an island in a given grid.
 """
+
+
 def island_perimeter(grid):
     """Calculate the perimeter of the island described in the grid"""
     perimeter = 0
